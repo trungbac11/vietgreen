@@ -1,0 +1,391 @@
+﻿metric_id,metric_name_vi,category,default_unit_id,name_variant_count,unit_variant_count,needs_review
+acid_generating_waste_rock,Đất đá thải có tiềm năng sinh axit,mining_waste,UNIT015,1,1,false
+air_emission_samples,Số mẫu khí thải,monitoring,UNIT024,1,1,false
+ambient_air_samples,Số mẫu không khí xung quanh,monitoring,UNIT024,1,1,false
+annual_electricity_reported_kw,"Điện tiêu thụ năm, đơn vị nguồn cần xác minh",energy,UNIT009,1,1,false
+aquaculture_wastewater_reused_share,Tỷ lệ nước thải nuôi tôm tái sử dụng,water,UNIT023,1,1,false
+beer_production,Sản lượng bia,production,UNIT007,1,1,false
+biogenic_ghg,Phát thải sinh học,ghg,UNIT028,2,1,true
+biomass_electricity,Điện sinh khối tiêu thụ,energy,UNIT010,1,1,false
+biomass_electricity_generated,Điện sinh khối tạo ra từ bã mía,energy,UNIT010,1,1,false
+biomass_steam,Hơi sinh khối sử dụng,energy,UNIT035,1,1,false
+biomass_steam_energy,Năng lượng hơi sinh khối,energy,UNIT001,1,1,false
+biomass_steam_intensity,Cường độ hơi sinh khối,energy,UNIT043,1,1,false
+carbon_neutralized_certified,Lượng carbon trung hòa có kiểm chứng,ghg,UNIT028,1,1,false
+carton_collection_trips,Số chuyến thu gom vỏ hộp,circularity,UNIT036,1,1,false
+carton_material_reduction_share,Giảm nguyên liệu giấy thùng carton,circularity,UNIT023,1,1,false
+cng,CNG sử dụng,energy,UNIT021,1,1,false
+cng_intensity,Cường độ CNG,energy,UNIT042,1,1,false
+cng_mass,CNG khối lượng,energy,UNIT011,1,1,false
+cng_reported_steam,CNG - lượng nguồn ghi tấn hơi,energy,UNIT044,1,1,false
+cng_saved_initiatives,CNG tiết kiệm từ sáng kiến,energy,,1,2,true
+coal,Than đá sử dụng,energy,UNIT026,1,1,false
+coal_energy,Năng lượng than,energy,UNIT001,1,1,false
+contractor_ghg_total,Tổng phát thải nhà thầu tại mỏ,ghg,UNIT028,1,1,false
+contractor_indirect_ghg,Phát thải gián tiếp nhà thầu tại mỏ,ghg,UNIT028,1,1,false
+deionized_water,Nước khử ion,water,UNIT015,1,1,false
+diesel_do,Dầu DO sử dụng,energy,UNIT014,1,1,false
+diesel_do_intensity_mass,Cường độ dầu DO,energy,UNIT012,1,1,false
+diesel_do_mass,Khối lượng dầu DO,energy,UNIT026,2,1,true
+diesel_energy,Năng lượng dầu DO,energy,UNIT001,1,1,false
+diesel_fuel_oil_combined,Dầu DO và FO tổng,energy,UNIT014,1,1,false
+domestic_waste,Rác sinh hoạt,waste,UNIT026,1,1,false
+domestic_waste_intensity,Cường độ rác sinh hoạt,waste,UNIT012,1,1,false
+domestic_waste_landfill_share,Tỷ lệ rác sinh hoạt chôn lấp,waste,UNIT023,2,1,true
+domestic_water_table_reported,Nước thải sinh hoạt theo bảng,water,UNIT015,1,1,false
+domestic_water_used,Nước dùng sinh hoạt,water,UNIT015,1,1,false
+electricity_consumption_reduction_yoy_pct,Giảm tổng điện so với 2020,energy,UNIT023,1,1,false
+electricity_energy,Năng lượng điện,energy,UNIT001,1,1,false
+electricity_energy_equivalent,Năng lượng điện quy đổi,energy,UNIT001,1,1,false
+electricity_ghg_inventory,Điện trong bảng kiểm kê GHG,energy,UNIT010,1,1,false
+electricity_intensity_product,Cường độ điện,energy,UNIT040,1,1,false
+electricity_intensity_reduction_vs_2021_pct,Giảm định mức điện so với 2021,energy,UNIT023,1,1,false
+electricity_intensity_reduction_vs_2022_pct,Giảm định mức điện so với 2022,energy,UNIT023,1,1,false
+electricity_reduction_yoy_pct,Giảm điện so với năm trước,energy,UNIT023,1,1,false
+electricity_saved_initiatives,Điện tiết kiệm từ sáng kiến,energy,UNIT010,1,1,false
+energy_change_vs_2022,Thay đổi năng lượng so với năm 2022,energy,UNIT023,1,1,false
+energy_intensity_beer,Cường độ năng lượng bia,energy,UNIT002,1,1,false
+energy_intensity_milk,Bình quân/ tấn sản phẩm sữa,energy,UNIT003,1,1,false
+energy_intensity_product,Cường độ năng lượng,energy,UNIT039,1,1,false
+energy_intensity_reduction_vs_2023_pct,Giảm cường độ năng lượng so với 2023,energy,UNIT023,1,1,false
+energy_intensity_sugar,Cường độ năng lượng trên tấn sản phẩm đường,energy,UNIT004,1,1,false
+energy_reduction_vs_2023_pct,Giảm năng lượng so với 2023,energy,UNIT023,1,1,false
+environment_samples_total,Tổng số mẫu môi trường,monitoring,UNIT024,1,1,false
+epr_aluminum_recycled_direct,Lon nhôm trực tiếp tái chế,circularity,UNIT026,1,1,false
+epr_aluminum_recycled_pro,Lon nhôm tái chế qua PRO,circularity,UNIT026,1,1,false
+epr_aluminum_recycled_total,Lon nhôm tái chế theo EPR tổng,circularity,UNIT026,1,1,false
+epr_carton_recycled,Bao bì carton sau tiêu dùng tái chế,circularity,UNIT026,1,1,false
+epr_packaging_collected_recycled,Bao bì thu hồi và đưa vào tái chế EPR,circularity,UNIT026,1,1,false
+epr_plan_completion_share,Hoàn thành kế hoạch tái chế EPR,circularity,UNIT023,1,1,false
+foam_box_recycling_share,Tỷ lệ thùng xốp tái chế,circularity,UNIT023,1,1,false
+fuel_oil_energy,Năng lượng dầu FO,energy,UNIT001,1,1,false
+fuel_oil_fo,Dầu FO sử dụng,energy,UNIT014,1,1,false
+fuel_oil_fo_intensity_mass,Cường độ dầu FO,energy,UNIT012,1,1,false
+fuel_oil_fo_mass,Khối lượng dầu FO,energy,UNIT026,1,1,false
+gas,Gas sử dụng,energy,UNIT026,1,1,false
+gas_intensity_mass,Cường độ gas,energy,UNIT012,1,1,false
+gasoline,Xăng sử dụng,energy,UNIT014,1,1,false
+gasoline_energy,Năng lượng xăng,energy,UNIT001,1,1,false
+gasoline_intensity_mass,Cường độ xăng,energy,UNIT012,1,1,false
+gasoline_mass,Khối lượng xăng,energy,UNIT026,1,1,false
+ghg_aerobic_wastewater,Phát thải xử lý hiếu khí,ghg,UNIT028,1,1,false
+ghg_anaerobic_wastewater,Phát thải xử lý kị khí,ghg,UNIT028,1,1,false
+ghg_blasting,Phát thải từ nổ mìn,ghg,UNIT028,1,1,false
+ghg_cng_cooking,Phát thải CNG bếp ăn,ghg,UNIT028,1,1,false
+ghg_diesel_ch4_reported,Phát thải CH4 từ diesel,ghg,UNIT028,1,1,false
+ghg_diesel_co2_reported,Phát thải CO2 từ diesel,ghg,UNIT028,1,1,false
+ghg_diesel_generator,Phát thải dầu máy phát điện,ghg,UNIT028,1,1,false
+ghg_diesel_n2o_reported,Phát thải N2O từ diesel,ghg,UNIT034,1,1,false
+ghg_diesel_transport,Phát thải dầu phương tiện,ghg,UNIT028,1,1,false
+ghg_domestic_wastewater,Phát thải nước thải sinh hoạt,ghg,UNIT028,1,1,false
+ghg_fire_extinguishers,Phát thải bình chữa cháy,ghg,UNIT028,1,1,false
+ghg_fuel_combustion,Phát thải từ nhiên liệu,ghg,UNIT028,1,1,false
+ghg_fugitive_process,Phát thải rò rỉ và sản xuất,ghg,UNIT028,1,1,false
+ghg_gasoline_transport,Phát thải xăng phương tiện,ghg,UNIT028,1,1,false
+ghg_industrial_wastewater,Phát thải xử lý nước thải công nghiệp,ghg,UNIT028,1,1,false
+ghg_intensity_beer,Cường độ phát thải bia,ghg,UNIT029,1,1,false
+ghg_intensity_milk,Bình quân/tấn sản phẩm sữa,ghg,UNIT031,1,1,false
+ghg_intensity_product,Cường độ phát thải,ghg,UNIT032,1,1,false
+ghg_intensity_reduction_vs_2023_pct,Giảm cường độ phát thải so với 2023,ghg,UNIT023,1,1,false
+ghg_intensity_sugar,Bình quân/tấn sản phẩm đường,ghg,UNIT033,1,1,false
+ghg_lpg_ch4_reported,Phát thải CH4 từ lpg,ghg,UNIT028,1,1,false
+ghg_lpg_co2_reported,Phát thải CO2 từ lpg,ghg,UNIT028,1,1,false
+ghg_lpg_n2o_reported,Phát thải N2O từ lpg,ghg,UNIT034,1,1,false
+ghg_mobile_combustion,Phát thải đốt di động,ghg,UNIT028,1,1,false
+ghg_purchased_electricity,Phát thải điện lưới,ghg,UNIT028,2,1,true
+ghg_purchased_steam,Phát thải hơi mua,ghg,UNIT028,1,1,false
+ghg_reduced_cooling_optimization,Giảm phát thải nhờ tối ưu làm lạnh,ghg,UNIT028,1,1,false
+ghg_reduced_drying_optimization,Giảm phát thải nhờ cải tiến tháp sấy,ghg,UNIT028,1,1,false
+ghg_reduced_ecodesign,Giảm phát thải thiết kế sinh thái,ghg,UNIT028,1,1,false
+ghg_reduced_smart_warehouses,Giảm phát thải từ kho thông minh,ghg,UNIT027,1,1,false
+ghg_reduced_solar_hot_water,Giảm phát thải nhờ nước nóng mặt trời,ghg,UNIT028,1,1,false
+ghg_reduced_vs_2023,Giảm phát thải Scope 1 và 2 so với 2023,ghg,UNIT028,1,1,false
+ghg_reduction_vs_2023_pct,Giảm tổng phát thải so với 2023,ghg,UNIT023,2,1,true
+ghg_refrigerants,Phát thải từ môi chất lạnh,ghg,UNIT028,1,1,false
+ghg_reported_co2e_total,Tổng cột CO2 tương đương theo nguồn,ghg,UNIT028,1,1,false
+ghg_reported_n2oe_total,Tổng cột N2O tương đương theo nguồn,ghg,UNIT034,1,1,false
+ghg_reported_scope_1_2_3_partial,"Phát thải gồm Scope 1, 2 và nước thải Scope 3",ghg,UNIT028,2,1,true
+ghg_rice_husk_ch4_reported,Phát thải CH4 từ rice_husk,ghg,UNIT028,1,1,false
+ghg_rice_husk_co2_reported,Phát thải CO2 từ rice_husk,ghg,UNIT028,1,1,false
+ghg_rice_husk_n2o_reported,Phát thải N2O từ rice_husk,ghg,UNIT034,1,1,false
+ghg_stationary_combustion,Phát thải đốt cố định,ghg,UNIT028,1,1,false
+ghg_wastewater_ch4,Phát thải CH4 xử lý nước thải theo bảng,ghg,UNIT028,1,1,false
+ghg_wastewater_reported,Phát thải nước thải được công bố,ghg,UNIT028,1,1,false
+ghg_wastewater_treatment,Phát thải từ xử lý nước thải,ghg,UNIT028,1,1,false
+grid_electricity,Điện EVN tiêu thụ,energy,UNIT010,1,1,false
+grid_electricity_energy,Năng lượng điện lưới,energy,UNIT001,1,1,false
+grid_energy_share,Tỷ lệ năng lượng từ điện lưới,energy,UNIT023,1,1,false
+groundwater_domestic,Nước ngầm phục vụ sinh hoạt,water,UNIT015,1,1,false
+groundwater_production,Nước ngầm phục vụ sản xuất,water,UNIT015,1,1,false
+groundwater_samples,Số mẫu nước dưới đất,monitoring,UNIT024,1,1,false
+groundwater_withdrawal,Nước ngầm (nước dưới đất),water,UNIT015,1,1,false
+hazardous_waste,Chất thải nguy hại,waste,UNIT026,1,1,false
+hazardous_waste_ash_disposed,Tro - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_ash_diverted,Tro - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_ash_generated,Tro - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_batteries_disposed,Pin/ắc quy - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_batteries_diverted,Pin/ắc quy - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_batteries_generated,Pin/ắc quy - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_chemicals_disposed,Hóa chất - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_chemicals_diverted,Hóa chất - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_chemicals_generated,Hóa chất - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_compliance_share,Chất thải nguy hại xử lý đúng quy định,waste,UNIT023,3,1,true
+hazardous_waste_diverted,Chất thải nguy hại chuyển hướng,waste,UNIT026,1,1,false
+hazardous_waste_electronics_disposed,Thiết bị điện tử - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_electronics_diverted,Thiết bị điện tử - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_electronics_generated,Thiết bị điện tử - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_ferrous_disposed,Kim loại sắt - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_ferrous_diverted,Kim loại sắt - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_ferrous_generated,Kim loại sắt - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_glass_disposed,Thủy tinh - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_glass_diverted,Thủy tinh - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_glass_generated,Thủy tinh - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_infectious_disposed,Lây nhiễm - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_infectious_diverted,Lây nhiễm - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_infectious_generated,Lây nhiễm - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_intensity,Cường độ chất thải nguy hại,waste,UNIT012,1,1,false
+hazardous_waste_mixed_disposed,Hỗn hợp - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_mixed_diverted,Hỗn hợp - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_mixed_generated,Hỗn hợp - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_mixed_metals_disposed,Kim loại hỗn hợp - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_mixed_metals_diverted,Kim loại hỗn hợp - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_mixed_metals_generated,Kim loại hỗn hợp - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_nonferrous_disposed,Kim loại màu - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_nonferrous_diverted,Kim loại màu - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_nonferrous_generated,Kim loại màu - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_oil_disposed,Dầu thải - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_oil_diverted,Dầu thải - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_oil_generated,Dầu thải - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_other_disposed,Khác - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_other_diverted,Khác - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_other_generated,Khác - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_plastic_disposed,Nhựa và màng nhựa - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_plastic_diverted,Nhựa và màng nhựa - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_plastic_generated,Nhựa và màng nhựa - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_total_disposed,Tổng - xử lý trực tiếp (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_total_diverted,Tổng - chuyển hướng khỏi xử lý cuối (hazardous),waste,UNIT026,1,1,false
+hazardous_waste_total_generated,Tổng - tổng phát sinh (hazardous),waste,UNIT026,1,1,false
+high_arsenic_waste_rock,Đất đá thải hàm lượng Asen cao,mining_waste,UNIT015,1,1,false
+hydroelectricity_reported,Điện được nguồn gọi là thủy điện,energy,UNIT010,1,1,false
+industrial_sludge,Bùn thải công nghiệp,waste,UNIT026,2,1,true
+industrial_wastewater_treated,Nước thải công nghiệp xử lý theo diễn giải,water,UNIT015,1,1,false
+industrial_water_table_reported,Nước thải công nghiệp theo bảng,water,UNIT015,1,1,false
+irrigation_water_supplied,Nước cấp cho tưới tiêu địa phương,water,UNIT015,1,1,false
+iso_14001_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 14001,certification,UNIT023,1,1,false
+iso_14001_units,Số đơn vị có chứng nhận/xác minh ISO 14001,certification,UNIT037,1,1,false
+iso_14064_1_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 14064-1,certification,UNIT023,1,1,false
+iso_14064_1_units,Số đơn vị có chứng nhận/xác minh ISO 14064-1,certification,UNIT037,1,1,false
+iso_14068_1_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 14068-1,certification,UNIT023,1,1,false
+iso_14068_1_units,Số đơn vị có chứng nhận/xác minh ISO 14068-1,certification,UNIT037,1,1,false
+iso_22000_and_other_food_safety_pct,Tỷ lệ cơ sở chứng nhận 22000_and_other_food_safety,certification,UNIT023,2,1,true
+iso_22000_and_other_food_safety_units,Số cơ sở chứng nhận 22000_and_other_food_safety,certification,UNIT037,2,1,true
+iso_27001_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 27001,certification,UNIT023,1,1,false
+iso_27001_units,Số đơn vị có chứng nhận/xác minh ISO 27001,certification,UNIT037,1,1,false
+iso_45001_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 45001,certification,UNIT023,1,1,false
+iso_45001_units,Số đơn vị có chứng nhận/xác minh ISO 45001,certification,UNIT037,1,1,false
+iso_50001_pct,Tỷ lệ đơn vị có chứng nhận/xác minh ISO 50001,certification,UNIT023,1,1,false
+iso_50001_units,Số đơn vị có chứng nhận/xác minh ISO 50001,certification,UNIT037,1,1,false
+iso_9001_pct,Tỷ lệ cơ sở chứng nhận 9001,certification,UNIT023,2,1,true
+iso_9001_units,Số cơ sở chứng nhận 9001,certification,UNIT037,2,1,true
+lightweighted_probi_bottles,Số chai Probi giảm độ dày,circularity,UNIT005,1,1,false
+livestock_wastewater_reused_share,Tỷ lệ nước thải chăn nuôi tái sử dụng,water,UNIT023,1,1,false
+lpg_mass,LPG,energy,UNIT026,1,1,false
+milk_cartons_collected_mass_program,Khối lượng vỏ hộp sữa thu gom,circularity,UNIT026,2,1,true
+milk_cartons_collected_program,Vỏ hộp sữa thu gom chương trình Vỏ xinh,circularity,UNIT006,1,1,false
+milk_product_output,Sản lượng sản phẩm sữa,production,UNIT026,1,1,false
+mining_material_not_reused,Vật liệu không tái sử dụng,mining_waste,UNIT015,1,1,false
+mining_material_reused,Đất đá thải tái sử dụng,mining_waste,UNIT015,1,1,false
+municipal_water_withdrawal,Nước thủy cục,water,UNIT015,1,1,false
+natural_gas_energy,Năng lượng khí tự nhiên,energy,UNIT001,1,1,false
+non_acid_generating_waste_rock,Đất đá thải không sinh axit,mining_waste,UNIT015,1,1,false
+nonhazardous_waste,Chất thải không nguy hại,waste,UNIT026,1,1,false
+nonhazardous_waste_ash_disposed,Tro - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_ash_diverted,Tro - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_ash_generated,Tro - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_cardboard_disposed,Bìa carton - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_cardboard_diverted,Bìa carton - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_cardboard_generated,Bìa carton - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_composted,Chất thải ủ phân,waste,UNIT026,1,1,false
+nonhazardous_waste_diverted,Chất thải không nguy hại chuyển hướng,waste,UNIT026,1,1,false
+nonhazardous_waste_ferrous_disposed,Kim loại sắt - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_ferrous_diverted,Kim loại sắt - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_ferrous_generated,Kim loại sắt - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_glass_disposed,Thủy tinh - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_glass_diverted,Thủy tinh - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_glass_generated,Thủy tinh - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_disposed,Hỗn hợp - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_diverted,Hỗn hợp - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_generated,Hỗn hợp - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_metals_disposed,Kim loại hỗn hợp - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_metals_diverted,Kim loại hỗn hợp - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_mixed_metals_generated,Kim loại hỗn hợp - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_nonferrous_disposed,Kim loại màu - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_nonferrous_diverted,Kim loại màu - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_nonferrous_generated,Kim loại màu - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_other_disposed,Khác - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_other_diverted,Khác - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_other_generated,Khác - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_paper_disposed,Giấy - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_paper_diverted,Giấy - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_paper_generated,Giấy - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_plastic_disposed,Nhựa và màng nhựa - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_plastic_diverted,Nhựa và màng nhựa - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_plastic_generated,Nhựa và màng nhựa - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_prepared_reuse,Chất thải chuẩn bị tái sử dụng,waste,UNIT026,1,1,false
+nonhazardous_waste_recycled,Chất thải tái chế,waste,UNIT026,1,1,false
+nonhazardous_waste_rubber_disposed,Cao su - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_rubber_diverted,Cao su - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_rubber_generated,Cao su - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_sludge_disposed,Bùn thải xử lý nước - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_sludge_diverted,Bùn thải xử lý nước - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_sludge_generated,Bùn thải xử lý nước - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_total_disposed,Tổng - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_total_diverted,Tổng - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_total_generated,Tổng - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_wood_disposed,Gỗ - xử lý trực tiếp (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_wood_diverted,Gỗ - chuyển hướng khỏi xử lý cuối (nonhazardous),waste,UNIT026,1,1,false
+nonhazardous_waste_wood_generated,Gỗ - tổng phát sinh (nonhazardous),waste,UNIT026,1,1,false
+nonrenewable_energy,Năng lượng không tái tạo,energy,UNIT001,1,1,false
+nonrenewable_fuel_energy,Nhiên liệu không tái tạo,energy,UNIT001,1,1,false
+nox_concentration,Nồng độ NOx khí thải,air_emissions,UNIT020,1,1,false
+ods_emissions,Phát thải chất suy giảm tầng ozone,air_emissions,UNIT013,1,1,false
+oil_powder_recycling_share,Tỷ lệ tái chế dầu bột thải,waste,UNIT023,2,1,true
+oil_powder_waste,Dầu bột thải tái chế,waste,UNIT026,1,1,false
+operational_ghg_breakdown_total,Tổng phát thải trong bảng phân khúc,ghg,UNIT028,1,1,false
+ordinary_waste,Chất thải thông thường,waste,UNIT026,1,1,false
+other_certifications_pct,Tỷ lệ nhà máy có chứng nhận other_certifications,certification,UNIT023,1,1,false
+other_certifications_units,Số nhà máy có chứng nhận other_certifications,certification,UNIT037,1,1,false
+oxide_tailings,Quặng đuôi Oxit,mining_waste,UNIT026,1,1,false
+packaging_waste,Phế liệu bao bì tái chế,waste,UNIT026,1,1,false
+packaging_waste_recycling_share,Tỷ lệ phế liệu bao bì tái chế,waste,UNIT023,1,1,false
+particulate_concentration,Nồng độ bụi tổng khí thải,air_emissions,UNIT020,1,1,false
+pas_2060_pct,Tỷ lệ đơn vị có chứng nhận/xác minh PAS 2060,certification,UNIT023,1,1,false
+pas_2060_units,Số đơn vị có chứng nhận/xác minh PAS 2060,certification,UNIT037,1,1,false
+plastic_packaging_collected_recycling_share,Tỷ lệ bao bì nhựa thu gom để tái chế,circularity,UNIT023,1,1,false
+plastic_packaging_recyclable_share,Tỷ lệ bao bì nhựa có khả năng tái chế,circularity,UNIT023,1,1,false
+plastic_removed_pre_cut_cap,Nhựa loại bỏ dự án nắp có tai,circularity,UNIT026,1,1,false
+plastic_straws_removed,Số ống hút nhựa loại bỏ,circularity,UNIT025,1,1,false
+produced_water_withdrawal,Nước sản xuất khai thác,water,UNIT015,1,1,false
+product_ghg_intensity,Cường độ phát thải sản phẩm APT,ghg,,8,2,true
+product_water_replenishment_share,Mục tiêu bù hoàn nước trong sản phẩm,water,UNIT023,1,1,false
+production_water_used,Nước dùng sản xuất,water,UNIT015,1,1,false
+purchased_steam,Hơi mua ngoài,energy,UNIT035,1,1,false
+pvc_pipe_recycling_share,Tỷ lệ ống PVC tái chế,circularity,UNIT023,1,1,false
+rainwater_withdrawal,Nước mưa,water,UNIT015,1,1,false
+recyclable_waste,Chất thải có thể tái chế,waste,UNIT026,1,1,false
+recycled_material_input_share,Tỷ lệ nguyên vật liệu tái chế đầu vào,circularity,UNIT023,1,1,false
+redesigned_straws,Số ống hút được giảm chiều dài và độ dày,circularity,UNIT025,1,1,false
+refrigerant_conversion_share,Hệ thống lạnh chuyển R22 sang NH3,air_emissions,UNIT023,1,1,false
+renewable_energy,Năng lượng tái tạo sử dụng,energy,UNIT001,1,1,false
+renewable_energy_fuel_share,Tỷ lệ năng lượng/nhiên liệu tái tạo sản xuất,energy,UNIT023,1,1,false
+renewable_energy_share,Tỷ lệ năng lượng tái tạo,energy,UNIT023,2,1,true
+renewable_packaging_material_share,Tỷ lệ nguyên liệu tái tạo bao bì Tetra Top,circularity,UNIT023,1,1,false
+reporting_units,Số đơn vị trong phạm vi báo cáo,certification,UNIT037,1,1,false
+reusable_recyclable_beverage_packaging_share,Mục tiêu bao bì đồ uống tái sử dụng/tái chế,circularity,UNIT023,2,1,true
+reusable_recyclable_biodegradable_packaging_share,Mục tiêu bao bì tái sử dụng/tái chế/phân hủy sinh học,circularity,UNIT023,1,1,false
+rice_husk_mass_ghg_inventory,Trấu nghiền trong kiểm kê,energy,UNIT026,1,1,false
+rice_husk_mass_supplier,Trấu đơn vị cấp hơi,energy,UNIT026,1,1,false
+scope_1_2_ghg_excluding_vietsugar,Tổng phạm vi 1 và phạm vi 2 từ Vinamilk (*),ghg,UNIT028,1,1,false
+scope_1_2_ghg_total,Tổng phạm vi 1 và phạm vi 2,ghg,UNIT028,2,1,true
+scope_1_flag,Phát thải Scope 1 FLAG,ghg,UNIT028,1,1,false
+scope_1_ghg,PHẠM VI 1,ghg,UNIT028,2,1,true
+scope_1_nonflag,Phát thải Scope 1 Non-FLAG,ghg,UNIT028,1,1,false
+scope_2_ghg,PHẠM VI 2,ghg,UNIT028,2,1,true
+scope_2_nonflag,Phát thải Scope 2 Non-FLAG,ghg,UNIT028,1,1,false
+scope_3_ghg_mine_contractors,Phát thải Scope 3 từ nhà thầu tại mỏ,ghg,UNIT028,1,1,false
+scrap_waste,Phế liệu,waste,UNIT026,1,1,false
+scrap_waste_intensity,Cường độ phế liệu,waste,UNIT012,1,1,false
+seawater_withdrawal,Nước biển khai thác,water,UNIT015,1,1,false
+sedex_smeta_pct,Tỷ lệ đơn vị có chứng nhận/xác minh Sedex SMETA,certification,UNIT023,1,1,false
+sedex_smeta_units,Số đơn vị có chứng nhận/xác minh Sedex SMETA,certification,UNIT037,1,1,false
+shrimp_head_shell_recycling_share,Tỷ lệ tận dụng đầu vỏ tôm,waste,UNIT023,2,1,true
+shrimp_head_shell_waste,Đầu vỏ tôm tái chế,waste,UNIT026,1,1,false
+shrimp_product_output,Sản lượng sản phẩm theo kiểm kê,production,UNIT026,1,1,false
+sludge_recycling_share,Tỷ lệ bùn thải xử lý nước tái chế,waste,UNIT023,1,1,false
+sludge_sent_to_fertilizer_share,Tỷ lệ bùn thải chuyển làm phân bón,waste,UNIT023,1,1,false
+soil_solid_waste_samples,Số mẫu đất và chất thải rắn,monitoring,UNIT024,1,1,false
+solar_biomass_electricity_share,% Điện mặt trời và điện sinh khối,energy,UNIT023,1,1,false
+solar_electricity,Điện mặt trời tiêu thụ,energy,UNIT010,1,1,false
+solar_electricity_energy,Năng lượng điện mặt trời mái nhà,energy,UNIT001,1,1,false
+solar_electricity_production_segment,Điện mặt trời sử dụng mảng sản xuất,energy,UNIT010,1,1,false
+solar_electricity_share,% Điện mặt trời,energy,UNIT023,1,1,false
+solar_installed_breweries,Nhà máy lắp điện mặt trời,energy,UNIT037,1,1,false
+solar_share_production_segment,Tỷ lệ điện mặt trời mảng sản xuất,energy,UNIT023,1,1,false
+sox_concentration,Nồng độ SOx khí thải,air_emissions,UNIT020,1,1,false
+steam_consumption,Hơi nước bão hòa tiêu thụ,energy,UNIT035,1,1,false
+steam_consumption_reduction_yoy_pct,Giảm tổng hơi so với 2020,energy,UNIT023,1,1,false
+steam_generated_initiatives,Hơi tạo ra phục vụ vận hành từ sáng kiến,energy,UNIT035,1,1,false
+steam_intensity_reduction_vs_2021_pct,Giảm định mức hơi so với 2021,energy,UNIT023,1,1,false
+steam_intensity_reduction_vs_2022_pct,Giảm định mức hơi so với 2022,energy,UNIT023,1,1,false
+sugar_output,Sản lượng đường,production,UNIT026,1,1,false
+sulfide_tailings,Quặng đuôi Sunfua,mining_waste,UNIT026,1,1,false
+supplementary_wastewater_treatment_capacity,Công suất hệ thống xử lý hóa lý bổ sung,water,UNIT016,1,1,false
+supplier_water,Nước từ nhà cung cấp,water,UNIT015,1,1,false
+surface_water_samples,Số mẫu nước mặt,monitoring,UNIT024,1,1,false
+surface_water_withdrawal,Nước mặt sử dụng,water,UNIT015,2,1,true
+tailings_total,Tổng quặng đuôi,mining_waste,UNIT026,1,1,false
+thermal_energy,Nhiệt năng tiêu thụ,energy,UNIT001,1,1,false
+total_electricity,Tổng điện tiêu thụ,energy,UNIT010,1,1,false
+total_energy,Tổng năng lượng tiêu thụ,energy,UNIT001,3,1,true
+total_energy_excluding_vietsugar,Tổng năng lượng tiêu thụ của Vinamilk (**),energy,UNIT001,1,1,false
+total_waste,Tổng chất thải công nghiệp,waste,UNIT026,2,1,true
+total_water_consumption,Tổng nước tiêu thụ,water,UNIT015,1,1,false
+total_water_discharge,Tổng nước thải đầu ra,water,UNIT015,3,1,true
+total_water_input,Tổng nước đầu vào,water,UNIT015,1,1,false
+total_water_table_reported,Tổng lượng nước theo bảng,water,UNIT015,1,1,false
+total_water_used,Tổng nước sử dụng,water,UNIT015,1,1,false
+treated_farm_wastewater_reused_share,Nước thải trang trại đã xử lý tái sử dụng,water,UNIT023,1,1,false
+treatment_pond_area_min_share,Diện tích ao xử lý tối thiểu so với ao nuôi,water,UNIT023,1,1,false
+vietsugar_scope_1_2_ghg,Tổng phạm vi 1 và phạm vi 2 của nhà máy đường,ghg,UNIT028,1,1,false
+virgin_plastic_reduced,Nhựa nguyên sinh cắt giảm hai dự án bao bì,circularity,UNIT026,2,1,true
+waste_diversion_share,Tỷ lệ chuyển hướng khỏi xử lý cuối,waste,UNIT023,2,1,true
+waste_final_disposal,Chất thải xử lý cuối,waste,UNIT026,2,1,true
+waste_incinerated_energy_recovery,Đốt chất thải thu hồi năng lượng,waste,UNIT026,1,1,false
+waste_incinerated_landfilled,"Tổng lượng chất thải xử lý bằng phương pháp như thiêu hủy, chôn lấp",waste,UNIT026,1,1,false
+waste_intensity_milk,Cường độ chất thải trên sản phẩm sữa,waste,UNIT012,1,1,false
+waste_landfilled,Chất thải đưa đến bãi rác,waste,UNIT026,1,1,false
+waste_other_disposal,Chất thải xử lý cách khác,waste,UNIT026,1,1,false
+waste_recycled,Chất thải tái chế,waste,UNIT026,1,1,false
+waste_recycling_share,Tỷ lệ tái chế,waste,UNIT023,1,1,false
+waste_reused_recycled_recovered,"Tổng lượng chất thải được tái sử dụng, tái chế và theo phương pháp khôi phục khác",waste,UNIT026,1,1,false
+waste_rock_dam,Đá thải dùng xây đập,mining_waste,UNIT015,1,1,false
+waste_rock_other_construction,Đất đá thải cho xây dựng khác,mining_waste,UNIT015,1,1,false
+waste_rock_stored,Vật liệu đá lưu trữ,mining_waste,UNIT015,1,1,false
+waste_soil_dam,Đất dùng xây đập,mining_waste,UNIT015,1,1,false
+waste_soil_rock_dam_combined,Đất đá xây đập TSF (ô gộp),mining_waste,UNIT015,1,1,false
+wastewater_compliance_share,Tỷ lệ nước thải xử lý đạt chuẩn,water,UNIT023,1,1,false
+wastewater_energy_reported,Năng lượng nước thải nguồn ghi kWh,energy,UNIT041,1,1,false
+wastewater_samples,Số mẫu nước thải,monitoring,UNIT024,1,1,false
+wastewater_treated,Lượng nước thải xử lý Q,water,UNIT015,1,1,false
+wastewater_treatment_capacity,Công suất trạm xử lý nước thải,water,UNIT016,1,1,false
+wastewater_volume_unit_unknown,"Nước thải theo bảng, chưa rõ đơn vị",water,UNIT038,1,1,false
+water_based_ink_carton_share,Tỷ lệ thùng giấy dùng mực hệ nước,circularity,UNIT023,1,1,false
+water_consumption_intensity_beer,Cường độ tiêu thụ nước bia,water,UNIT008,1,1,false
+water_consumption_intensity_reduction_vs_2023_pct,Giảm cường độ tiêu thụ nước so với 2023,water,UNIT023,2,1,true
+water_consumption_nonstressed_areas,Nước tiêu thụ vùng không thiếu nước,water,UNIT015,1,1,false
+water_consumption_reduction_yoy_pct,Giảm tổng nước so với 2020,water,UNIT023,1,1,false
+water_consumption_stressed_areas,Nước tiêu thụ vùng thiếu nước,water,UNIT015,1,1,false
+water_input_intensity_product,Cường độ nước,water,UNIT018,2,1,true
+water_intensity_milk,Cường độ sử dụng nước nhà máy,water,UNIT018,3,1,true
+water_intensity_reduction_vs_2021_pct,Giảm định mức nước so với 2021,water,UNIT023,1,1,false
+water_intensity_reduction_vs_2022_pct,Giảm định mức nước so với 2022,water,UNIT023,1,1,false
+water_recovered_can_rinse,Nước tráng lon thu hồi,water,UNIT017,1,1,false
+water_reused,Nước tuần hoàn,water,UNIT015,3,1,true
+water_reused_cot,Nước tuần hoàn từ COT,water,UNIT015,1,1,false
+water_reused_dp2,Nước tuần hoàn DP2,water,UNIT015,1,1,false
+water_reused_otc,Nước tuần hoàn từ hồ OTC,water,UNIT015,1,1,false
+water_reused_ptp,Nước tuần hoàn từ hồ PTP,water,UNIT015,1,1,false
+water_reused_share,Tỷ lệ nước tuần hoàn tái sử dụng sản xuất,water,UNIT023,2,1,true
+water_reused_stc,Nước tuần hoàn từ hồ STC,water,UNIT015,1,1,false
+water_reused_vnotch,Nước tuần hoàn từ V-notch,water,UNIT015,1,1,false
+water_saved_cip,Nước tiết kiệm do tối ưu CIP,water,UNIT019,1,1,false
+water_saved_condensate,Nước tiết kiệm thu hồi nước ngưng,water,UNIT019,1,1,false
+water_saved_hot_wort,Nước tiết kiệm khi chảy nha,water,UNIT019,1,1,false
+water_saved_initiatives,Nước tiết kiệm từ sáng kiến,water,,1,2,true
+water_saved_machine_improvements,Nước tiết kiệm do cải tiến thiết bị,water,UNIT019,1,1,false
+water_saved_pump_cooling,Nước tiết kiệm nhờ tối ưu phốt bơm,water,UNIT019,1,1,false
+water_saved_recovery,Nước tiết kiệm do thu hồi,water,UNIT019,1,1,false
+water_withdrawal_intensity_beer,Lượng nước khai thác mỗi hL bia,water,UNIT008,1,1,false
+water_withdrawal_intensity_reduction_vs_2023_pct,Giảm cường độ khai thác nước so với 2023,water,UNIT023,2,1,true
+water_withdrawal_reduced_vs_2023,Giảm lượng nước khai thác so với 2023,water,UNIT019,1,1,false
+water_withdrawal_stressed_areas,Khai thác nước khu vực áp lực nước,water,UNIT015,1,1,false

@@ -1,0 +1,64 @@
+﻿table_name,column_name,key_type,meaning,notes
+dim_company,company_id,PK,Existing conformed company key,Reused unchanged from the environmental model.
+dim_company,company_name,,Company display name,Reused unchanged from the environmental model.
+dim_company,industry_id,FK,Company industry,References dim_industry in the environmental model.
+dim_company,is_food_company,,Food-company flag,Reused unchanged.
+dim_brand,brand_id,PK,Brand surrogate key,Generated deterministically.
+dim_brand,company_id,FK,Owner company,References dim_company.company_id.
+dim_brand,brand_name,,Brand display name,From source brand.
+dim_product_category,product_category_id,PK,Product taxonomy key,Unique combination of product_class/category/subcategory.
+dim_product_category,product_class,,Highest product class,From source.
+dim_product_category,category,,Product category,From source.
+dim_product_category,subcategory,,Product subcategory,From source.
+dim_product,product_id,PK,Product/profile business key,Preserved exactly from source.
+dim_product,company_id,FK,Owning company,References dim_company.
+dim_product,brand_id,FK,Brand,References dim_brand.
+dim_product,product_category_id,FK,Product taxonomy,References dim_product_category.
+dim_product,product_name,,Product display name,From source.
+dim_product,variant,,Variant / product format,From source.
+dim_product,net_content_or_pack,,Net content / pack configuration,From source.
+dim_product,packaging,,Packaging description,From source; blank preserved.
+dim_product,alcohol_abv_pct,,Alcohol by volume (%),Numeric-like attribute; blank for non-alcohol products.
+dim_product,ingredients_materials,,Ingredients/materials text,From source; no inference.
+dim_product,key_specs,,Key product specifications,From source.
+dim_product,record_grain,,Meaning of one product row,Preserved because current source mixes product/SKU/product-line grains.
+dim_source,source_id,PK,Source key,Unique by source_type + source_title + source_url.
+dim_source,source_type,,Source type,"Official product page, data sheet, article, etc."
+dim_source,source_title,,Source title,From source.
+dim_source,source_url,,Source URL,From source.
+bridge_product_source,product_source_id,PK,Product-source association key,Generated.
+bridge_product_source,product_id,FK,Product,References dim_product.
+bridge_product_source,source_id,FK,Source,References dim_source.
+bridge_product_source,source_role,,PRIMARY / SECONDARY,Converted from primary_source_* and secondary_source_* columns.
+dim_certification,certification_id,PK,Certification key,Unique by certification_name + certification_type.
+dim_certification,certification_name,,Certification name,Parsed from certifications_json.
+dim_certification,certification_type,,Certification type,Parsed from certifications_json.
+bridge_product_certification,product_certification_id,PK,Product-certification association key,Generated.
+bridge_product_certification,product_id,FK,Product,References dim_product.
+bridge_product_certification,certification_id,FK,Certification,References dim_certification.
+bridge_product_certification,item_order,,Original JSON array order,Preserves source ordering.
+bridge_product_certification,certification_scope,,Certification scope,Parsed from certifications_json.
+bridge_product_certification,evidence_text,,Evidence text,Parsed from certifications_json.
+dim_award,award_id,PK,Award key,Unique by award_name + award_type.
+dim_award,award_name,,Award name,Parsed from awards_json.
+dim_award,award_type,,Award type,Parsed from awards_json.
+bridge_product_award,product_award_id,PK,Product-award association key,Generated.
+bridge_product_award,product_id,FK,Product,References dim_product.
+bridge_product_award,award_id,FK,Award,References dim_award.
+bridge_product_award,item_order,,Original JSON array order,Preserves source ordering.
+bridge_product_award,award_scope,,Award scope,Parsed from awards_json.
+bridge_product_award,evidence_text,,Evidence text,Parsed from awards_json.
+fact_product_sustainability_claim,claim_id,PK,Claim observation key,One row per claim.
+fact_product_sustainability_claim,product_id,FK,Product,References dim_product.
+fact_product_sustainability_claim,item_order,,Original JSON array order,Preserves source ordering.
+fact_product_sustainability_claim,claim_text,,Sustainability claim,Parsed from sustainability_claims_json.
+fact_product_sustainability_claim,claim_scope,,Claim scope,Parsed from JSON.
+fact_product_sustainability_claim,claim_status,,Claim support/status,Parsed from JSON.
+fact_product_verification,product_verification_id,PK,Verification snapshot key,One row per product in current file; extensible to history.
+fact_product_verification,product_id,FK,Product,References dim_product.
+fact_product_verification,environmental_evidence_level,,Evidence classification,From source.
+fact_product_verification,source_revision_or_publish_date,,Source date/revision note,Kept at record verification level because source field may summarize multiple sources.
+fact_product_verification,verified_at,,Verification date,From source.
+fact_product_verification,verification_status,,Verification status,From source.
+fact_product_verification,quality_flags,,Quality flags,From source.
+fact_product_verification,quality_note,,Quality note,From source.

@@ -1,0 +1,24 @@
+﻿product_certification_id,product_id,certification_id,item_order,certification_scope,evidence_text
+PCERT0001,COM003-P001,CERT002,1,Minh Phu Mangrove farming system/supply chain,official Minh Phu business-areas page
+PCERT0002,COM003-P001,CERT001,2,Minh Phu Mangrove farming system/supply chain,official Minh Phu business-areas page
+PCERT0003,COM003-P001,CERT003,3,Minh Phu Mangrove farming system/supply chain,official Minh Phu business-areas page
+PCERT0004,COM003-P001,CERT007,4,Minh Phu Mangrove farming system/supply chain,official Minh Phu business-areas page
+PCERT0005,COM005-P001,CERT005,1,product/farm production system,official Vinamilk product page
+PCERT0006,COM005-P001,CERT004,2,product,official Vinamilk product page + Clean Label Project listing
+PCERT0007,COM005-P002,CERT004,1,product,official Vinamilk product page; corroborated by Clean Label Project Vinamilk listing
+PCERT0008,COM005-P003,CERT004,1,product,official Vinamilk product page
+PCERT0009,COM005-P004,CERT004,1,product,official Vinamilk product page
+PCERT0010,COM005-P005,CERT004,1,product,current official Vinamilk fresh-milk collection/product presentation
+PCERT0011,COM005-P006,CERT004,1,product,official Vinamilk product page
+PCERT0012,COM006-P001,CERT001,1,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0013,COM006-P001,CERT002,2,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0014,COM006-P001,CERT006,3,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0015,COM006-P002,CERT001,1,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0016,COM006-P002,CERT002,2,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0017,COM006-P002,CERT006,3,closed farming system / Vinh Foods pangasius portfolio,official Vinh Foods fish-fillet page
+PCERT0018,COM006-P003,CERT001,1,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page
+PCERT0019,COM006-P003,CERT002,2,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page
+PCERT0020,COM006-P003,CERT006,3,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page
+PCERT0021,COM006-P004,CERT001,1,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page
+PCERT0022,COM006-P004,CERT002,2,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page
+PCERT0023,COM006-P004,CERT006,3,closed farming system / Vinh Foods pangasius portfolio,official Vinh Hoan/Vinh Foods product page

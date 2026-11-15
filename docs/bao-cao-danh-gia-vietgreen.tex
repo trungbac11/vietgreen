@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{LiberationSerif}[
+  Path=fonts/, Extension=.ttf, UprightFont=*-Regular,
+  BoldFont=*-Bold, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\setmonofont{LiberationSerif}[
+  Path=fonts/, Extension=.ttf, UprightFont=*-Regular,
+  BoldFont=*-Bold, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3ex plus -1ex minus -.2ex}{1.5ex plus .2ex}{\normalfont\fontsize{16}{19}\selectfont\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}{-2.5ex plus -1ex minus -.2ex}{1ex plus .2ex}{\normalfont\fontsize{16}{19}\selectfont\bfseries}}
+\makeatother
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{booktabs,tabularx,amsmath,enumitem,hyperref}
+\hypersetup{hidelinks,unicode}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\begin{document}
+\begin{center}
+{\fontsize{16}{19}\selectfont\bfseries Đánh giá hiện trạng nền tảng VietGreen\par}
+Báo cáo kỹ thuật sau cập nhật\\
+Đánh giá trên cơ sở mã nguồn và dữ liệu dự án\\
+13 tháng 11 năm 2026
+\end{center}
+\noindent\textbf{Tóm tắt.} VietGreen là bản trình diễn tra cứu dữ liệu môi trường của doanh nghiệp, sản phẩm và tài liệu nguồn. Phiên bản hiện tại bổ sung phân tích xu hướng có điều kiện và pipeline thu thập bằng chứng. Kiểm tra mã nguồn và dữ liệu cho thấy hệ thống có cơ chế bảo toàn đơn vị, phạm vi và thông tin truy xuất; tuy nhiên, độ tin cậy của dữ liệu chưa được xác nhận độc lập và phạm vi pipeline còn hẹp. Hệ thống phù hợp để khảo sát dữ liệu và thử nghiệm nội bộ; chưa đủ bằng chứng để xem là nền tảng xác minh tuyên bố xanh hay vận hành sản xuất.
+
+\section{Mục tiêu và phương pháp}
+Đánh giá khả năng hiện có, chất lượng dữ liệu, độ tin cậy phân tích và mức sẵn sàng vận hành tại thời điểm khảo sát. Phương pháp gồm đọc mã ứng dụng, pipeline, cấu hình và tài liệu; thống kê trực tiếp các tệp CSV; chạy kiểm thử tự động có thể thực hiện tại môi trường hiện tại. Các nhận xét về pipeline dựa trên mã và cấu hình, không phải kết quả chạy đầu cuối. Không có lịch sử Git khả dụng trong workspace, nên không thể định lượng chính xác thay đổi so với phiên bản trước.
+
+\section{Kết quả}
+\subsection{Phạm vi chức năng và dữ liệu}
+Ứng dụng cung cấp danh mục doanh nghiệp, sản phẩm, tuyên bố môi trường và nguồn; lọc, phân trang, xem chi tiết bằng chứng, đồ thị theo chuỗi và xuất CSV. API phục vụ danh mục, chỉ tiêu, chuỗi và kết quả phân tích. Dữ liệu được nạp từ CSV vào SQLite khi xem thử hoặc PostgreSQL trong cấu hình Docker [1--3].
+
+\begin{table}[ht]
+\centering
+\caption{Quy mô dữ liệu CSV tại thời điểm đánh giá [3]}
+\begin{tabular}{lr@{\hspace{1cm}}lr}
+\toprule
+Đối tượng & Số bản ghi & Đối tượng & Số bản ghi \\
+\midrule
+Doanh nghiệp & 6 & Sản phẩm & 30 \\
+Quan sát môi trường & 2.046 & Danh mục chỉ tiêu & 390 \\
+Báo cáo doanh nghiệp & 34 & Nguồn sản phẩm & 49 \\
+Tuyên bố sản phẩm & 20 & Đơn vị & 44 \\
+\bottomrule
+\end{tabular}
+\end{table}
+Trong 2.046 quan sát, 1.638 có trạng thái \texttt{extracted}, 260 \texttt{needs\_review} và 148 \texttt{not\_reported}. Các trạng thái này là nhãn trong bộ dữ liệu, không chứng minh kiểm định độc lập. Năm ghi nhận trải từ 2018 đến 2040 và gồm các loại đo lường khác nhau; không nên hiểu tất cả là kết quả thực tế cùng kỳ.
+
+\subsection{Các tính năng giao diện người dùng}
+Giao diện hiện dùng tiếng Anh cho điều hướng và phần lớn nhãn; tên chỉ tiêu giữ theo dữ liệu nguồn. Thanh điều hướng gồm Tổng quan, Doanh nghiệp, Sản phẩm, Tuyên bố xanh, Báo cáo và nguồn, và Chất lượng dữ liệu. Các mục Consumption, Knowledge Graph và AI Assistant được ghi là chức năng dự kiến, chưa phải chức năng đang cung cấp [1, 5].
+
+\textbf{Tổng quan.} Trang đầu nêu một thay đổi nổi bật cùng hai giá trị, đơn vị, phạm vi và nguồn tham chiếu; đồng thời thống kê độ phủ dữ liệu. Khu vực Insight spotlight cho phép lọc kết quả theo doanh nghiệp, nhóm chỉ tiêu, năm, chỉ tiêu và chiều thay đổi; mỗi kết quả có đường dẫn đến chuỗi tương ứng. Bộ khám phá cho phép chọn doanh nghiệp, chỉ tiêu, chuỗi theo thực thể/ranh giới/đơn vị/loại đo lường và khoảng năm; người dùng có thể mở bảng quan sát và nguồn. Biểu đồ bỏ các giá trị thiếu, không chính xác hoặc trùng trong năm và không nối qua năm thiếu. Trang còn dẫn đến doanh nghiệp, sản phẩm và ghi chú về dữ liệu.
+
+\textbf{Doanh nghiệp.} Danh sách hỗ trợ tìm theo tên và lọc ngành. Hồ sơ doanh nghiệp hiển thị độ phủ theo nhóm, số chỉ tiêu, quan sát, sản phẩm và báo cáo; có đồ thị theo chỉ tiêu và chuỗi. Bảng quan sát hỗ trợ tìm tên chỉ tiêu, lọc năm và phân trang. Chọn một dòng để mở thông tin nguồn, trang PDF/trang in, giá trị và đơn vị gốc, phương pháp trích xuất, trạng thái rà soát và ghi chú. Các thẻ riêng liệt kê sản phẩm, báo cáo, tài liệu pipeline đã công bố và lưu ý về phạm vi dữ liệu. Tài liệu thu thập tự động có thể hiển thị liên kết nguồn, mã băm và đoạn trích trang đầu nếu có.
+
+\textbf{Sản phẩm.} Danh mục hỗ trợ tìm theo sản phẩm hoặc thương hiệu, lọc theo doanh nghiệp và việc có tuyên bố. Hồ sơ hiển thị thông tin sản phẩm, mức bằng chứng ghi nhận, chứng nhận và giải thưởng kèm phạm vi, cùng liên kết tới doanh nghiệp. Các thẻ cho phép xem tuyên bố, nguồn và trạng thái dữ liệu. Chỉ tiêu doanh nghiệp không được xem là dấu chân môi trường của sản phẩm; nguồn được gắn ở cấp sản phẩm, không khẳng định chứng minh từng tuyên bố.
+
+\textbf{Tuyên bố, nguồn và chất lượng.} Trang Green Claims tìm theo nội dung, lọc doanh nghiệp và dẫn tới sản phẩm. Trang Reports \& Sources tìm báo cáo hoặc nguồn, mở URL nguồn sản phẩm khi có và xuất bảng dữ liệu hiện tại ra CSV. Trang Data Quality hiển thị số quan sát theo trạng thái rà soát, mức bằng chứng sản phẩm và các nguyên tắc đọc phạm vi, đơn vị, mục tiêu. Giao diện có trạng thái chờ, không có dữ liệu và lỗi; khả năng sử dụng thực tế, màn hình nhỏ và công nghệ hỗ trợ chưa được kiểm thử trong đánh giá này.
+
+\subsection{Phân tích và truy xuất}
+Kết quả xu hướng tính phần trăm thay đổi giữa hai năm liên tiếp bằng $(x_t-x_{t-1})/x_{t-1}$. Mã chỉ dùng giá trị thực tế chính xác, duy nhất theo năm, với cùng doanh nghiệp, chỉ tiêu, thực thể, ranh giới và đơn vị; giá trị gốc phải dương [4]. Kết quả giữ ID quan sát, nguồn và giới hạn. Điều kiện trùng khớp trường dữ liệu giúp giảm so sánh sai, nhưng chưa xác nhận phương pháp đo hay ranh giới thực tế không đổi.
+
+Ở cấp sản phẩm, liên kết nguồn hiện gắn với sản phẩm chứ chưa gắn riêng cho từng tuyên bố. Tên tệp và số trang của báo cáo doanh nghiệp có trong dữ liệu, nhưng PDF gốc của các báo cáo này không đi kèm bản demo [5]. Vì vậy chưa thể suy ra từng tuyên bố đã được chứng minh, hoặc dùng platform để xếp hạng xanh hay tính dấu chân sản phẩm.
+
+\subsection{Pipeline và vận hành}
+Cấu hình dùng Airflow, MinIO, PostgreSQL và dbt. Pipeline tải nguồn đã đăng ký, lưu nội dung gốc và mã băm, trích xuất, chạy kiểm thử dbt rồi mới công bố; lỗi được ghi nhận và việc công bố dùng giao dịch [6]. Danh sách nguồn hiện chỉ có một tài liệu cho Vinamilk. Pipeline thu thập tài liệu, chưa tự động tạo quan sát môi trường. Lịch được cấu hình lúc 02:00 UTC hằng ngày. Những điểm này là năng lực theo mã, chưa được xác nhận qua lần chạy thực tế trong đánh giá.
+
+Nhập CSV có kiểm tra khóa, tham chiếu và một số quan hệ cùng doanh nghiệp; dữ liệu xuất CSV có xử lý tiền tố công thức. Cấu hình dịch vụ mặc định chỉ ánh xạ cổng về localhost. Tuy vậy, cấu hình chứa thông tin mặc định cho môi trường cục bộ và chưa thể hiện xác thực, phân quyền, sao lưu/khôi phục hay giám sát sản xuất đầy đủ [1, 2, 6]. Không nên suy ra hệ thống sẵn sàng mở công khai từ cấu hình demo này.
+
+\section{Kiểm thử và giới hạn đánh giá}
+Kiểm thử trong phiên này: 6 kiểm thử nhập và truy vấn dữ liệu, 2 kiểm thử phân tích, 5 kiểm thử xử lý pipeline và 1 kiểm thử JavaScript của trang tổng quan đều đạt. Đây là kiểm thử trên môi trường cục bộ, không phải đánh giá toàn diện. Không kiểm tra đầu cuối PostgreSQL--Airflow--MinIO--dbt, trình duyệt, khả năng tiếp cận, hiệu năng, bảo mật hoặc tính đúng đắn của tài liệu gốc. Docker không khả dụng với quyền của phiên; do đó không thể xác nhận trạng thái triển khai hiện hành. Số liệu trong báo cáo phản ánh CSV trong workspace, không nhất thiết trùng cơ sở dữ liệu đang chạy.
+
+\section{Thảo luận và khuyến nghị}
+\begin{enumerate}
+\item \textbf{Ưu tiên độ tin cậy bằng chứng.} Thêm liên kết từng tuyên bố tới tài liệu và vị trí cụ thể; bổ sung quy trình rà soát, trạng thái người duyệt và nguồn gốc có thể kiểm tra.
+\item \textbf{Kiểm soát khả năng so sánh.} Lưu thay đổi về phương pháp, phạm vi tổ chức và kỳ báo cáo; kiểm tra trước khi đưa ra so sánh hoặc diễn giải xu hướng.
+\item \textbf{Hoàn thiện pipeline.} Mở rộng nguồn có chọn lọc; chạy thử đầu cuối, phục hồi sau lỗi và kiểm tra chất lượng dữ liệu. Chỉ tự động công bố chỉ tiêu sau khi có quy tắc trích xuất và rà soát phù hợp.
+\item \textbf{Chuẩn bị vận hành.} Kiểm thử giao diện trên thiết bị và công cụ hỗ trợ; thiết lập xác thực, phân quyền, quản lý bí mật, sao lưu và giám sát trước khi triển khai nhiều người dùng.
+\end{enumerate}
+\section{Kết luận}
+Bản cập nhật tạo được nền tảng tra cứu có truy xuất và phân tích thận trọng, cùng khung thu thập bằng chứng có kiểm tra trước công bố. Giá trị hiện tại là hỗ trợ nghiên cứu ban đầu. Hạn chế chính nằm ở xác minh dữ liệu, liên kết bằng chứng theo từng tuyên bố và bằng chứng vận hành đầu cuối; đây là các điều kiện cần giải quyết trước khi mở rộng mục đích sử dụng.
+
+\section*{Nguồn nội bộ}
+\sloppy
+[1] \texttt{app/server.py}, \texttt{app/db.py}, \texttt{app/static/}.\\
+{}[2] \texttt{compose.yaml} (bao gồm profile pipeline).\\
+{}[3] Các tệp \texttt{data/*.csv}; thống kê trực tiếp ngày 13/11/2026.\\
+{}[4] \texttt{app/insights.py}; \texttt{tests/test\_insights.py}.\\
+{}[5] \texttt{UI\_UX\_AUDIT.md}; \texttt{app/static/app.js}.\\
+{}[6] \texttt{pipeline/run.py}, \texttt{pipeline/sources.json}, \texttt{pipeline/dags/} và hướng dẫn vận hành.
+\end{document}

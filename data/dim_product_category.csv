@@ -1,0 +1,14 @@
+﻿product_category_id,product_class,category,subcategory
+PCAT001,Aquaculture product,Seafood,Black tiger shrimp
+PCAT002,Aquaculture product,Seafood,Pangasius
+PCAT003,Aquaculture product,Seafood,Value-added pangasius
+PCAT004,Aquaculture product,Seafood,Vannamei shrimp
+PCAT005,Consumer packaged beverage,Beer,Beer
+PCAT006,Consumer packaged beverage,Beer,IPA craft beer
+PCAT007,Consumer packaged beverage,Beer,Lager
+PCAT008,Consumer packaged beverage,Beer,Pilsner
+PCAT009,Consumer packaged food,Dairy,UHT fresh milk
+PCAT010,Consumer packaged food,Dairy,Yogurt
+PCAT011,Consumer packaged food,Plant-based beverage,High-protein nut beverage
+PCAT012,Consumer packaged food,Plant-based beverage,Nut beverage
+PCAT013,Industrial material,Tungsten chemical,Tungsten intermediate

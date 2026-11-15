@@ -1,0 +1,101 @@
+name: vietgreen
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: vietgreen
+      POSTGRES_USER: vietgreen
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vietgreen -d vietgreen"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    mem_limit: 1g
+    restart: unless-stopped
+  web:
+    image: vietgreen-web:latest
+    build: .
+    environment:
+      DATABASE_URL: postgresql://vietgreen:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/vietgreen
+      DATA_DIR: /data
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8000}:8000"
+    volumes:
+      - ./data:/data:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    mem_limit: 512m
+    restart: unless-stopped
+  minio:
+    profiles: [pipeline]
+    # Community build from the upstream MinIO release.
+    image: coollabsio/minio:RELEASE.2025-04-22T22-12-26Z
+    command: server /data --console-address :9001
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-vietgreen_local}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?Set MINIO_ROOT_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${MINIO_API_PORT:-9000}:9000"
+      - "127.0.0.1:${MINIO_CONSOLE_PORT:-9001}:9001"
+    volumes:
+      - minio_data:/data
+    restart: unless-stopped
+  airflow:
+    image: vietgreen-airflow:latest
+    profiles: [pipeline]
+    build:
+      context: .
+      dockerfile: pipeline/Dockerfile
+    command: airflow standalone
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      AIRFLOW__CORE__DAGS_FOLDER: /opt/vietgreen/pipeline/dags
+      DATABASE_URL: postgresql://vietgreen:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/vietgreen
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: vietgreen
+      PGUSER: vietgreen
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER:-vietgreen_local}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD:?Set MINIO_ROOT_PASSWORD in .env}
+      MINIO_BUCKET: vietgreen-raw
+      MINIO_SECURE: "false"
+      DBT_PROFILES_DIR: /opt/vietgreen/pipeline/dbt
+      DBT_TARGET_PATH: /tmp/vietgreen-dbt/target
+      DBT_LOG_PATH: /tmp/vietgreen-dbt/logs
+    ports:
+      - "127.0.0.1:${AIRFLOW_PORT:-8080}:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      web:
+        condition: service_healthy
+      minio:
+        condition: service_started
+    volumes:
+      - airflow_data:/opt/airflow
+    restart: unless-stopped
+# Preserve the existing data volumes across the project rename.
+volumes:
+  pgdata:
+    external: true
+    name: vietgreen-demo_pgdata
+  minio_data:
+    external: true
+    name: vietgreen-demo_minio_data
+  airflow_data:
+    external: true
+    name: vietgreen-demo_airflow_data

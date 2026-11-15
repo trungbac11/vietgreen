@@ -1,0 +1,142 @@
+HƯỚNG DẪN VẬN HÀNH VIETGREEN
+============================
+
+1. MỞ TERMINAL VÀ VÀO THƯ MỤC DỰ ÁN
+
+cd /home/trungbac/vietgreen
+
+Nếu chưa có file .env, tạo file từ cấu hình mẫu:
+
+cp -n .env.example .env
+
+Mở file .env và đổi POSTGRES_PASSWORD, MINIO_ROOT_PASSWORD thành mật khẩu riêng.
+
+2. KHỞI ĐỘNG HỆ THỐNG
+
+Lần đầu cài đặt trên máy mới, tạo các volume dữ liệu:
+
+docker volume create vietgreen-demo_pgdata
+docker volume create vietgreen-demo_minio_data
+docker volume create vietgreen-demo_airflow_data
+
+Các volume giữ tên cũ để tiếp tục sử dụng dữ liệu trước khi đổi tên
+project sang vietgreen. Lệnh tạo volume không xóa dữ liệu đã có.
+
+Chỉ chạy website và PostgreSQL:
+
+docker compose up -d
+
+Để chạy thêm Airflow và MinIO cho pipeline, dùng các lệnh sau.
+
+Lần đầu hoặc sau khi sửa code:
+
+docker compose --profile pipeline up -d --build
+
+Lần sau, nếu không sửa code:
+
+docker compose --profile pipeline up -d
+
+Kiểm tra trạng thái:
+
+docker compose --profile pipeline ps
+
+Đợi db và web báo healthy. Lần đầu có thể mất vài phút.
+
+3. MỞ CÁC TRANG
+
+Website VietGreen: http://localhost:8000
+
+Airflow: http://localhost:8080
+Tài khoản: admin
+Mật khẩu được Airflow tạo tự động; lấy mật khẩu hiện tại bằng lệnh:
+
+docker compose --profile pipeline exec airflow cat /opt/airflow/standalone_admin_password.txt
+
+MinIO Console: http://localhost:9001
+Tài khoản theo .env hiện tại: vietgreen_local
+Mật khẩu: xem MINIO_ROOT_PASSWORD trong file .env
+Mở bucket vietgreen-raw để xem file nguồn.
+MinIO API: http://localhost:9000
+
+Các cổng và thông tin đăng nhập có thể được thay đổi trong file .env.
+Các địa chỉ này chỉ truy cập được từ máy đang chạy Docker.
+
+4. CHẠY PIPELINE
+
+Trong Airflow, tìm DAG vietgreen_evidence và bấm nút chạy.
+Hoặc chạy bằng terminal:
+
+docker compose --profile pipeline exec airflow airflow dags trigger vietgreen_evidence
+
+Kiểm tra các lần chạy:
+
+docker compose --profile pipeline exec airflow airflow dags list-runs -d vietgreen_evidence
+
+Pipeline cũng được đặt lịch chạy hằng ngày lúc 09:00 giờ Việt Nam.
+Sau khi chạy thành công, tải lại website và vào:
+Companies > Vinamilk > Reports & Evidence.
+
+Xem log Airflow:
+
+docker compose --profile pipeline logs -f airflow
+
+Nhấn Ctrl+C để thoát xem log; hệ thống vẫn chạy.
+
+5. KẾT NỐI POSTGRESQL BẰNG DBEAVER
+
+Tạo kết nối PostgreSQL với thông tin theo .env hiện tại:
+
+Host:      localhost
+Port:      5433
+Database:  vietgreen
+Username:  vietgreen
+Password:  xem POSTGRES_PASSWORD trong file .env
+
+Bấm Test Connection. Nếu báo Connection refused, kiểm tra port là 5433,
+không phải 5432, và kiểm tra container db đang chạy.
+Nếu đã đổi DB_PORT, dùng port trong file .env. Nếu database đã được tạo
+với mật khẩu khác, dùng mật khẩu đã cấu hình cho database đó.
+
+Các bảng pipeline:
+- pipeline.source_versions: phiên bản nguồn
+- pipeline.source_pages: nội dung trích xuất theo trang
+- pipeline.ingestion_runs: trạng thái và lỗi của các lần chạy
+- public.pipeline_document_evidence: bằng chứng đã công bố cho website
+
+Pipeline hiện thu thập tài liệu bằng chứng; chưa tự động tạo chỉ tiêu
+môi trường trong bảng fact_environment_metric.
+
+6. DỪNG HỆ THỐNG
+
+docker compose --profile pipeline down
+
+Lệnh này dừng cả website và pipeline và giữ dữ liệu trong Docker volume. Không thêm -v nếu muốn giữ
+PostgreSQL và các file đã lưu trong MinIO.
+
+7. MÔI TRƯỜNG ẢO PYTHON (KHI CHẠY TRỰC TIẾP TRÊN MÁY)
+
+Hướng dẫn vận hành ở trên chạy bằng Docker, nên không cần tạo môi trường
+ảo Python trên máy. Nếu cần chạy Python trực tiếp để phát triển hoặc kiểm
+thử, nên tạo môi trường ảo riêng trong thư mục dự án:
+
+cd /home/trungbac/vietgreen
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+
+Nếu lệnh tạo môi trường ảo báo thiếu venv, cài gói python3-venv bằng apt,
+sau đó chạy lại lệnh python3 -m venv .venv.
+
+Mỗi lần mở terminal mới, kích hoạt lại môi trường trước khi dùng:
+
+cd /home/trungbac/vietgreen
+source .venv/bin/activate
+
+Khi làm xong, thoát môi trường ảo bằng lệnh:
+
+deactivate
+
+Thư mục .venv chứa môi trường và thư viện Python riêng của dự án. File
+.env là file cấu hình biến môi trường, không phải môi trường ảo; tiếp tục
+dùng file này theo hướng dẫn ở phần 1. npm cài bằng apt là công cụ hệ thống
+và không nằm trong môi trường ảo Python.

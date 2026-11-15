@@ -1,0 +1,7 @@
+company_id,company_name,industry_id,is_food_company,logo_path
+COM001,HABECO,IND001,TRUE,/images/logos/COM001.png
+COM002,Masan High-Tech Materials,IND004,FALSE,/images/logos/COM002.png
+COM003,Minh Phú,IND003,TRUE,/images/logos/COM003.png
+COM004,SABECO,IND001,TRUE,/images/logos/COM004.png
+COM005,Vinamilk,IND002,TRUE,/images/logos/COM005.png
+COM006,Vĩnh Hoàn,IND003,TRUE,/images/logos/COM006.png

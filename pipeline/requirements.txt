@@ -1,0 +1,5 @@
+minio==7.2.15
+pdfplumber==0.11.5
+psycopg[binary]==3.2.13
+dbt-postgres==1.9.0
+dbt-core==1.9.8

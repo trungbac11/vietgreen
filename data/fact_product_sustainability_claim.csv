@@ -1,0 +1,21 @@
+﻿claim_id,product_id,item_order,claim_text,claim_scope,claim_status
+PCLM0001,COM003-P001,1,The mangrove-shrimp model combines shrimp farming with the natural mangrove ecosystem and is presented as supporting environmental preservation and mangrove restoration.,farming model,supported by official product page
+PCLM0002,COM003-P001,2,Minh Phu states environmentally friendly farming techniques and natural feeds are used in the Mangrove operation.,farming system,supported by official business-areas page
+PCLM0003,COM003-P002,1,Sustainably farmed using an integrated rice-shrimp model that combines rice cultivation and shrimp raising on the same land.,farming model,supported by official Minh Phu article
+PCLM0004,COM003-P002,2,The model is described as maximizing land use while promoting environmental sustainability.,farming model,supported by official Minh Phu article
+PCLM0005,COM005-P001,1,Produced under a 10-step EU Organic process.,product/farm,supported by official product page
+PCLM0006,COM005-P001,2,"Vinamilk states that at the farms, treated wastewater is fully reused, solar energy is used, and biogas energy is recovered.",farm context,supported by official product page
+PCLM0007,COM005-P002,1,Milk is sourced from an ecological farm model.,farm/supply chain,supported by official product page
+PCLM0008,COM005-P002,2,The official page presents Green Farm as ecological agriculture that reduces carbon emissions.,brand/farm context,supported by official product page
+PCLM0009,COM005-P006,1,The official page links Green Farm to a long-term farm carbon-emission reduction journey.,farm context,supported by official product page
+PCLM0010,COM005-P006,2,"The official page states 100% of treated wastewater is reused, solar energy is used, and up to 90% of bioenergy is recovered/used at the farm context.",farm context,supported by official product page
+PCLM0011,COM005-P007,1,The product page links the product to Green Farm's eco-farm / carbon-emission reduction journey.,farm context,supported by official product page
+PCLM0012,COM005-P008,1,Vinamilk's sustainability report states its whole-nut grinding technology helps minimize waste by-products into the environment.,production technology,supported by official sustainability report
+PCLM0013,COM005-P008,2,Official product page states no herbicide glyphosate.,product/agricultural-input claim,supported by official product page
+PCLM0014,COM005-P009,1,Official product page states no glyphosate herbicide.,product/agricultural-input claim,supported by official product page
+PCLM0015,COM005-P010,1,The product uses fresh milk sourced from Green Farm.,farm/supply-chain context,supported by official product page
+PCLM0016,COM006-P001,1,"Premium Pangasius fillets are described as sustainably sourced, ethically processed and fully traceable.",product/supply chain,supported by official product page
+PCLM0017,COM006-P002,1,"The product page states Premium Pangasius fillets are sustainably sourced, ethically processed and fully traceable.",product/supply chain,supported by official product page
+PCLM0018,COM006-P003,1,"The product page states Premium Pangasius is sustainably sourced, ethically processed and fully traceable.",product/supply chain,supported by official product page
+PCLM0019,COM006-P003,2,The page describes production in a closed farming area and links it with reduced impact on the environment/other species.,farming-system context,supported by official product page
+PCLM0020,COM006-P004,1,"The product page states Premium Pangasius is sustainably sourced, ethically processed and fully traceable.",product/supply chain,supported by official product page

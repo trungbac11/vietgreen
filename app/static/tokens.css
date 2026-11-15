@@ -1,0 +1,39 @@
+:root {
+  --surface: #ffffff;
+  --canvas: #f3f5f0;
+  --forest: #173f30;
+  --forest-deep: #10382a;
+  --text: #203a30;
+  --subtle: #60756a;
+  --rule: #dbe4da;
+  --accent: #2b6c4a;
+  --accent-soft: #e4efdf;
+  --focus: #b27321;
+  --font-body: "Segoe UI", Arial, sans-serif;
+}
+:root {
+  --brand-lime: #bed89c;
+  --brand-pale: #eaf1df;
+  --brand-ivory: #f8f9f3;
+  --brand-deep: #143f30;
+  --brand-muted: #6d8274;
+  --chart-ink: #337653;
+  --chart-grid: #dce6d9;
+  --nav-text: #d0e2d4;
+  --nav-muted: #a6c0ac;
+  --nav-active: #245942;
+  --white: #ffffff;
+}
+:root {
+  --ink-strong: #163b2e;
+  --ink-muted: #455f53;
+  --paper-warm: #f6f7f1;
+  --paper-green: #e6eedc;
+  --paper-white: #ffffff;
+  --rule-strong: #a9bcac;
+  --accent-dark: #1b5b3e;
+  --accent-pale: #d5e7b1;
+  --warning-text: #70571b;
+  --shadow-panel: 0 12px 32px rgba(17, 56, 40, .07);
+}
+:root { --control-border: #6a8374; }

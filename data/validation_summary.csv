@@ -1,0 +1,18 @@
+﻿check,value,status,details
+source_rows,30,PASS,30 product profile records.
+source_columns,30,PASS,30 columns; schema matched exactly.
+unique_product_id,30,PASS,No duplicate product_id.
+company_mapping,6,PASS,All company_id/company_name pairs exactly match the existing VietGreen dim_company.
+dim_brand_rows,12,PASS,Distinct brand per owner company.
+dim_product_category_rows,13,PASS,Distinct product_class/category/subcategory paths.
+dim_product_rows,30,PASS,1 normalized product profile per source row.
+dim_source_rows,49,PASS,Distinct source type/title/url combinations.
+product_source_rows,60,PASS,Primary/secondary source relationships.
+dim_certification_rows,7,PASS,Distinct certification name/type combinations.
+product_certification_rows,23,PASS,All certification JSON items exploded.
+dim_award_rows,6,PASS,Distinct award name/type combinations.
+product_award_rows,12,PASS,All award JSON items exploded.
+sustainability_claim_rows,20,PASS,All sustainability claim JSON items exploded.
+product_verification_rows,30,PASS,One current verification snapshot per product.
+foreign_key_errors,0,PASS,"{'product_company': 0, 'product_brand': 0, 'product_category': 0, 'brand_company': 0, 'bridge_source_product': 0, 'bridge_source_source': 0, 'bridge_cert_product': 0, 'bridge_cert_cert': 0, 'bridge_award_product': 0, 'bridge_award_award': 0, 'claim_product': 0, 'verification_product': 0}"
+json_semantic_roundtrip_mismatches,0,PASS,"certifications_json, awards_json, sustainability_claims_json reconstruct exactly as JSON structures."

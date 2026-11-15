@@ -1,0 +1,13 @@
+﻿product_award_id,product_id,award_id,item_order,award_scope,evidence_text
+PAWRD0001,COM005-P001,AWRD003,1,product,official Vinamilk product page
+PAWRD0002,COM005-P002,AWRD003,1,product/brand variant,official Vinamilk product page
+PAWRD0003,COM005-P002,AWRD001,2,product/brand variant,official Vinamilk product page
+PAWRD0004,COM005-P003,AWRD004,1,product,Vinamilk Sustainable Development Report 2023
+PAWRD0005,COM005-P004,AWRD004,1,product,Vinamilk Sustainable Development Report 2023
+PAWRD0006,COM005-P005,AWRD004,1,product,Vinamilk Sustainable Development Report 2023
+PAWRD0007,COM005-P006,AWRD001,1,product/brand variant,official Vinamilk product page
+PAWRD0008,COM005-P006,AWRD003,2,product/brand variant,official Vinamilk product page
+PAWRD0009,COM005-P008,AWRD006,1,product,Vinamilk Sustainable Development Report 2023
+PAWRD0010,COM005-P008,AWRD005,2,product,Vinamilk Sustainable Development Report 2023
+PAWRD0011,COM005-P008,AWRD002,3,product,Vinamilk Sustainable Development Report 2023
+PAWRD0012,COM005-P010,AWRD004,1,product,Vinamilk Sustainable Development Report 2023
